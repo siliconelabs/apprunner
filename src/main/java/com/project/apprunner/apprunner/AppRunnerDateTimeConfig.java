@@ -12,10 +12,12 @@ import java.time.LocalTime;
 
 @Configuration
 public class AppRunnerDateTimeConfig {
+
+
     @Autowired
     public LocalTime time;
     //SPEL
-    @Value("${userName23:userName}")
+    @Value("${userName:Admin}")
     String op;
 
 
@@ -30,7 +32,7 @@ public class AppRunnerDateTimeConfig {
     }
 
     @Bean
-    @Order(3)
+
     public ApplicationRunner runDisplayTime(LocalTime local)
     {
 
@@ -45,7 +47,7 @@ public class AppRunnerDateTimeConfig {
     }
 
     @Bean
-    @Order(1)
+
     public ApplicationRunner runDisplayDate()
     {
 
